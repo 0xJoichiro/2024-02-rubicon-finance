@@ -1,0 +1,15 @@
+[submodule "gladius-contracts-internal/lib/forge-std"]
+	path = gladius-contracts-internal/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "gladius-contracts-internal/lib/permit2"]
+	path = gladius-contracts-internal/lib/permit2
+	url = https://github.com/Uniswap/permit2
+[submodule "gladius-contracts-internal/lib/solmate"]
+	path = gladius-contracts-internal/lib/solmate
+	url = https://github.com/transmissions11/solmate
+[submodule "gladius-contracts-internal/lib/forge-gas-snapshot"]
+	path = gladius-contracts-internal/lib/forge-gas-snapshot
+	url = https://github.com/marktoda/forge-gas-snapshot
+[submodule "gladius-contracts-internal/lib/openzeppelin-contracts"]
+	path = gladius-contracts-internal/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
