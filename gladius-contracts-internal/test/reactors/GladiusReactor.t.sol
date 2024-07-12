@@ -749,4 +749,20 @@ contract GladiusReactorTest is
         // in case of equality return the 1st number.
         z = x <= y ? x : y;
     }
+
+
+    // forge test --match-contract GladiusReactorTest --match-test test_FeesRounding -vv
+    function test_FeesRounding(uint amount) external {
+        // @dev there will be plenty of values reverting this test. 
+        vm.assume(amount <= type(uint128).max);
+        vm.assume(amount >= 1e6);
+
+        uint DENOM = 100_000;
+        uint FEE = 1_000;
+
+        uint resultDown = FixedPointMathLib.mulDivDown(amount, FEE, DENOM);
+        uint resultUp = FixedPointMathLib.mulDivUp(amount, FEE, DENOM);
+
+        assertEq(resultDown, resultUp);
+    }
 }
